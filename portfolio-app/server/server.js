@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// MongoDB Connection
+// MongoDB Connection - User's MongoDB Atlas Cluster
 const MONGODB_URI = 'mongodb+srv://anshumand108_db_user:jaga%40123@cluster0.g8l3aet.mongodb.net/?appName=Cluster0&retryWrites=true&w=majority';
 
 mongoose.connect(MONGODB_URI)
