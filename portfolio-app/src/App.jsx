@@ -1067,205 +1067,133 @@ I'm Anshuman Das, a passionate Full-Stack Developer with expertise in React, Jav
         </div>
       </motion.section>
 
-{/* Quick Contact Info Section */}
+{/* Contact Section */}
 <motion.section
-  initial={{ opacity: 0, y: 50 }}
+  id="contact"
+  initial={{ opacity: 0, y: 80 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8 }}
   viewport={{ once: true }}
-  className="py-20 bg-slate-900/60 relative z-10 border-t border-slate-800"
+  className="py-20 max-w-4xl mx-auto px-6 relative z-10"
+  style={{ scrollMarginTop: '100px' }}
 >
-  <div className="max-w-4xl mx-auto px-6 text-center">
+  <motion.h2
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    className="text-4xl font-bold text-center mb-12"
+  >
+    <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+      Get In Touch
+    </span>
+  </motion.h2>
 
-    <motion.h2
-      initial={{ opacity: 0, scale: 0.8 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6 }}
-      className="text-4xl font-bold mb-12"
-    >
-      <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-        Get In Touch
-      </span>
-    </motion.h2>
+  <div className="bg-slate-800/80 backdrop-blur-md border border-slate-700 rounded-2xl p-8 shadow-2xl">
 
-    <div className="flex flex-col md:flex-row justify-center items-center gap-10">
-
-      {/* Phone */}
-      <motion.div
-        whileHover={{ scale: 1.1, y: -5 }}
-        className="flex items-center gap-4 bg-slate-800/70 px-8 py-5 rounded-2xl border border-slate-700 backdrop-blur-md"
-      >
-        <motion.div
-          animate={{ rotate: [0, 15, -15, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="text-3xl"
-        >
-          📞
-        </motion.div>
-        <div className="text-left">
-          <p className="text-sm text-slate-400">Phone</p>
-          <p className="text-lg font-semibold text-white">
-            +91 9556699769
-          </p>
->>>>>>> bf720d2fd496b4eb70e24b8cd81dd137e15d1bde
-        </div>
-      </motion.div>
-
-      {/* Email */}
-      <motion.div
-        whileHover={{ scale: 1.1, y: -5 }}
-        className="flex items-center gap-4 bg-slate-800/70 px-8 py-5 rounded-2xl border border-slate-700 backdrop-blur-md"
-      >
-        <motion.div
-          animate={{ y: [0, -6, 0] }}
-          transition={{ duration: 1.2, repeat: Infinity }}
-          className="text-3xl"
-        >
-          ✉️
-        </motion.div>
-        <div className="text-left">
-          <p className="text-sm text-slate-400">Email</p>
-          <p className="text-lg font-semibold text-white">
-            anshumand108@gmail.com
-          </p>
-        </div>
-      </motion.div>
-
+    {/* Contact Info */}
+    <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-8 text-slate-300">
+      <div className="flex items-center gap-3">
+        <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        <span>9556699769</span>
+      </div>
+      <div className="flex items-center gap-3">
+        <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        <span>anshumand108@gmail.com</span>
+      </div>
     </div>
-  </div>
-</motion.section>
-=======
-{/* Quick Contact Info Section */}
-<motion.section
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
-  viewport={{ once: true }}
-  className="py-20 bg-slate-900/60 relative z-10 border-t border-slate-800"
->
-  <div className="max-w-4xl mx-auto px-6 text-center">
 
-    <motion.h2
-      initial={{ opacity: 0, scale: 0.8 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6 }}
-      className="text-4xl font-bold mb-12"
-    >
-      <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-        Get In Touch
-      </span>
-    </motion.h2>
+    <form onSubmit={handleSubmit} className="space-y-6">
 
-    <div className="flex flex-col md:flex-row justify-center items-center gap-10">
-
-      {/* Phone */}
-      <motion.div
-        whileHover={{ scale: 1.1, y: -5 }}
-        className="flex items-center gap-4 bg-slate-800/70 px-8 py-5 rounded-2xl border border-slate-700 backdrop-blur-md"
-      >
-        <motion.div
-          animate={{ rotate: [0, 15, -15, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="text-3xl"
-        >
-          📞
-        </motion.div>
-        <div className="text-left">
-          <p className="text-sm text-slate-400">Phone</p>
-          <p className="text-lg font-semibold text-white">
-            +91 9556699769
-          </p>
-        </div>
-      </motion.div>
+      {/* Name */}
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        value={formData.name}
+        onChange={handleChange}
+        required
+        className="w-full p-4 rounded-lg bg-slate-900 border border-slate-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
 
       {/* Email */}
-      <motion.div
-        whileHover={{ scale: 1.1, y: -5 }}
-        className="flex items-center gap-4 bg-slate-800/70 px-8 py-5 rounded-2xl border border-slate-700 backdrop-blur-md"
-      >
-        <motion.div
-          animate={{ y: [0, -6, 0] }}
-          transition={{ duration: 1.2, repeat: Infinity }}
-          className="text-3xl"
+      <input
+        type="email"
+        name="email"
+        placeholder="your@email.com"
+        value={formData.email}
+        onChange={handleChange}
+        required
+        className="w-full p-4 rounded-lg bg-slate-900 border border-slate-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+
+      {/* Message */}
+      <textarea
+        name="message"
+        placeholder="Tell me about your project..."
+        rows="5"
+        value={formData.message}
+        onChange={handleChange}
+        required
+        className="w-full p-4 rounded-lg bg-slate-900 border border-slate-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+
+      {/* Status Message */}
+      {formStatus.message && (
+        <div
+          className={`text-sm p-3 rounded-lg ${
+            formStatus.type === "success"
+              ? "bg-green-500/20 text-green-400"
+              : "bg-red-500/20 text-red-400"
+          }`}
         >
-          ✉️
-        </motion.div>
-        <div className="text-left">
-          <p className="text-sm text-slate-400">Email</p>
-          <p className="text-lg font-semibold text-white">
-            anshumand108@gmail.com
-          </p>
+          {formStatus.message}
         </div>
-      </motion.div>
+      )}
 
-    </div>
-  </div>
-</motion.section>
-=======
-{/* Quick Contact Info Section */}
-<motion.section
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
-  viewport={{ once: true }}
-  className="py-20 bg-slate-900/60 relative z-10 border-t border-slate-800"
->
-  <div className="max-w-4xl mx-auto px-6 text-center">
-
-    <motion.h2
-      initial={{ opacity: 0, scale: 0.8 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6 }}
-      className="text-4xl font-bold mb-12"
-    >
-      <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-        Get In Touch
-      </span>
-    </motion.h2>
-
-    <div className="flex flex-col md:flex-row justify-center items-center gap-10">
-
-      {/* Phone */}
-      <motion.div
-        whileHover={{ scale: 1.1, y: -5 }}
-        className="flex items-center gap-4 bg-slate-800/70 px-8 py-5 rounded-2xl border border-slate-700 backdrop-blur-md"
+      {/* Submit Button */}
+      <motion.button
+        whileHover={{ scale: 1.03 }}
+        whileTap={{ scale: 0.97 }}
+        type="submit"
+        disabled={isSubmitting}
+        className="w-full py-4 rounded-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-600 hover:opacity-90 transition disabled:opacity-50"
       >
-        <motion.div
-          animate={{ rotate: [0, 15, -15, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="text-3xl"
-        >
-          📞
-        </motion.div>
-        <div className="text-left">
-          <p className="text-sm text-slate-400">Phone</p>
-          <p className="text-lg font-semibold text-white">
-            +91 9556699769
-          </p>
->>>>>>> bf720d2fd496b4eb70e24b8cd81dd137e15d1bde
-        </div>
-      </motion.div>
+        {isSubmitting ? "Sending..." : "Send Message"}
+      </motion.button>
+    </form>
 
-      {/* Email */}
-      <motion.div
-        whileHover={{ scale: 1.1, y: -5 }}
-        className="flex items-center gap-4 bg-slate-800/70 px-8 py-5 rounded-2xl border border-slate-700 backdrop-blur-md"
+    {/* Social Links */}
+    <div className="flex justify-center gap-8 mt-8 text-slate-400">
+      <a
+        href="https://github.com/anshumandas998"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-white transition"
       >
-        <motion.div
-          animate={{ y: [0, -6, 0] }}
-          transition={{ duration: 1.2, repeat: Infinity }}
-          className="text-3xl"
-        >
-          ✉️
-        </motion.div>
-        <div className="text-left">
-          <p className="text-sm text-slate-400">Email</p>
-          <p className="text-lg font-semibold text-white">
-            anshumand108@gmail.com
-          </p>
-        </div>
-      </motion.div>
+        GitHub
+      </a>
 
+      <a
+        href="https://www.linkedin.com/in/anshuman-das-95846828a/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-white transition"
+      >
+        LinkedIn
+      </a>
+
+      <a
+        href="https://x.com/AnshumanDa89069"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-white transition"
+      >
+        Twitter/X
+      </a>
     </div>
   </div>
 </motion.section>
