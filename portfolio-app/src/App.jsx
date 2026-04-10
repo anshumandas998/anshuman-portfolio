@@ -75,6 +75,7 @@ export default function Portfolio() {
               { name: 'Home', id: 'home' },
               { name: 'About', id: 'about' },
               { name: 'Education', id: 'education' },
+              { name: 'Achievements', id: 'achievements' },
               { name: 'Skills', id: 'skills' },
               { name: 'Projects', id: 'projects' },
               { name: 'Contact', id: 'contact' },
@@ -144,6 +145,7 @@ export default function Portfolio() {
                   { name: 'Home', id: 'home' },
                   { name: 'About', id: 'about' },
                   { name: 'Education', id: 'education' },
+                  { name: 'Achievements', id: 'achievements' },
                   { name: 'Skills', id: 'skills' },
                   { name: 'Projects', id: 'projects' },
                   { name: 'Contact', id: 'contact' },
@@ -857,6 +859,116 @@ I'm Anshuman Das, a passionate Full-Stack Developer with expertise in React, Jav
                     animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
                     transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
                     className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl ${edu.gradient} opacity-20 rounded-bl-full`}
+                  />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Achievements Section */}
+      <motion.section
+        id="achievements"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="py-16 md:py-24 pt-16 md:pt-24 bg-slate-800/50 relative z-10"
+        style={{ scrollMarginTop: '100px' }}
+      >
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl font-bold mb-4 text-center"
+          >
+            <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-500 bg-clip-text text-transparent">Achievements</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-slate-400 text-center mb-12"
+          >
+            Awards & Recognitions
+          </motion.p>
+          
+          <div className="grid md:grid-cols-1 gap-6">
+            {[
+              {
+                title: "2nd Runner-up",
+                event: "National Level Hackathon",
+year: "2026",
+                icon: "🏆",
+                gradient: "from-yellow-400 to-orange-500",
+                description: "2nd Runner-up for project 'Smart Agriculture Crop Process Explainer Bot' - Recognized for outstanding innovation and technical excellence."
+              }
+            ].map((achievement, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30, rotateX: -15 }}
+                whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+                transition={{ delay: index * 0.2, duration: 0.6, type: "spring" }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10, scale: 1.02 }}
+                className="group"
+              >
+                <div className="relative bg-slate-800/90 border border-slate-600/50 rounded-2xl p-8 backdrop-blur-sm overflow-hidden h-full mx-auto max-w-2xl">
+                  {/* Animated gradient background */}
+                  <motion.div
+                    animate={{ 
+                      backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"],
+                    }}
+                    transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+                    className={`absolute inset-0 bg-gradient-to-br ${achievement.gradient} opacity-0 group-hover:opacity-15 transition-opacity duration-500`}
+                    style={{ backgroundSize: "200% 200%" }}
+                  />
+                  
+                  {/* Icon with floating animation */}
+                  <motion.div
+                    animate={{ y: [0, -5, 0] }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                    className="relative z-10 text-6xl mb-6 flex justify-center"
+                  >
+                    {achievement.icon}
+                  </motion.div>
+                  
+                  {/* Content */}
+                  <div className="relative z-10 text-center">
+                    <motion.h3 
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ delay: 0.3 }}
+                      className="text-3xl font-bold text-white mb-4"
+                    >
+                      {achievement.title}
+                    </motion.h3>
+                    <p className="text-orange-400 text-xl font-semibold mb-2">{achievement.event}</p>
+                    <p className="text-slate-300 text-lg mb-4 leading-relaxed">{achievement.description}</p>
+                    
+                    {/* Year badge */}
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      transition={{ delay: 0.5, type: "spring" }}
+                      className="inline-block px-6 py-2 rounded-full text-lg font-bold bg-gradient-to-r from-yellow-500 to-orange-500 text-slate-900 shadow-lg"
+                    >
+                      {achievement.year}
+                    </motion.div>
+                  </div>
+                  
+                  {/* Decorative corner accent */}
+                  <motion.div
+                    animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                    className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl ${achievement.gradient} opacity-20 rounded-bl-full`}
+                  />
+                  <motion.div
+                    animate={{ scale: [1, 1.1, 1], opacity: [0.2, 0.4, 0.2] }}
+                    transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
+                    className={`absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr ${achievement.gradient} opacity-15 rounded-tr-full`}
                   />
                 </div>
               </motion.div>

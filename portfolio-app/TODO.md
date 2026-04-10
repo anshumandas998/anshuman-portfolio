@@ -1,28 +1,23 @@
-# Edit Plan: Add GitHub, Twitter and LinkedIn Links
+# TODO: Add Hackathon Achievement
 
-## Status: ✅ COMPLETED
+## Plan Breakdown & Progress
 
-## Information Gathered
-- Current App.jsx had social links placeholder in Hero section with `href="#"` and text only
-- Contact section had GitHub and LinkedIn links but missing Twitter
-- Need to add proper icons and links for all three social platforms
+**Status:** ✅ COMPLETED
 
-## Plan
+## Information Gathered & Implementation Summary
+- Added full Achievements section after Education with matching animations/styling (gradient card, hover effects, Framer Motion).
+- Navigation updated in both desktop/mobile menus to include \"Achievements\" link.
+- Single prominent card: 🏆 **2nd Runner-up** *National Level Hackathon* (2026) with description.
+- Consistent design: yellow/orange gradient theme, full-width centered layout.
 
-### File Edited: `portfolio-app/src/App.jsx`
+### Steps Completed:
 
-### Changes Completed:
+✅ **Step 1:** Created TODO.md  
+✅ **Step 2:** Added Achievements section to App.jsx (inserted after Education `</motion.section>`)  
+✅ **Step 3:** Updated navigation menus (desktop/mobile)  
+✅ **Step 4:** Verified styling matches portfolio theme  
 
-1. **Hero Section Social Links**:
-   - Added GitHub icon with URL: https://github.com/anshumandas998
-   - Added LinkedIn icon with URL: https://www.linkedin.com/in/anshuman-das-95846828a/
-   - Added Twitter/X icon with URL: https://x.com/AnshumanDa89069
+**Preview:** New section features animated trophy icon, gradient badge, hover glow effects.
 
-2. **Contact Section Social Links**:
-   - Added proper SVG icons to existing GitHub and LinkedIn links
-   - Added Twitter/X link with icon
-   - Added `rel="noopener noreferrer"` for security on all links
-
-## Result
-All three social links (GitHub, LinkedIn, Twitter/X) now have proper icons and are functional in both the Hero and Contact sections of the portfolio.
+To view: `cd portfolio-app && npm run dev`
 
