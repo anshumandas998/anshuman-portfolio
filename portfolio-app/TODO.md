@@ -1,23 +1,23 @@
-# TODO: Add Hackathon Achievement
+# Deployment & Update Plan for GitHub/Vercel
 
-## Plan Breakdown & Progress
+## Progress Tracking
 
-**Status:** ✅ COMPLETED
+**Status:** ⏳ In Progress
 
-## Information Gathered & Implementation Summary
-- Added full Achievements section after Education with matching animations/styling (gradient card, hover effects, Framer Motion).
-- Navigation updated in both desktop/mobile menus to include \"Achievements\" link.
-- Single prominent card: 🏆 **2nd Runner-up** *National Level Hackathon* (2026) with description.
-- Consistent design: yellow/orange gradient theme, full-width centered layout.
+### Steps:
 
-### Steps Completed:
+✅ **Step 1:** Analyzed repo state (git status: on blackboxai/hackathon-achievement branch, unstaged changes in .DS_Store/server/.env/server.js)
 
-✅ **Step 1:** Created TODO.md  
-✅ **Step 2:** Added Achievements section to App.jsx (inserted after Education `</motion.section>`)  
-✅ **Step 3:** Updated navigation menus (desktop/mobile)  
-✅ **Step 4:** Verified styling matches portfolio theme  
+✅ **Step 2:** Created deployment TODO
 
-**Preview:** New section features animated trophy icon, gradient badge, hover glow effects.
+⏳ **Step 3:** Fix contact form for production (localhost → env var)
 
-To view: `cd portfolio-app && npm run dev`
+⏳ **Step 4:** .gitignore updates (.env, .DS_Store)
 
+⏳ **Step 5:** Git commit & push to GitHub
+
+⏳ **Step 6:** Vercel deploy
+
+⏳ **Step 7:** Test live site https://anshumandas-portfolio.vercel.app/
+
+**Next Action:** Update contact form URL in App.jsx for Vercel compatibility.
