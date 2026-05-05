@@ -24,7 +24,8 @@ export default function Portfolio() {
     setFormStatus({ type: '', message: '' });
 
     try {
-      const response = await fetch('http://localhost:5001/api/contact', {
+const apiUrl = `${import.meta.env.VITE_API_URL || 'http://localhost:5001'}/api/contact`;
+const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -86,7 +87,7 @@ export default function Portfolio() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * (index + 1) }}
                 onClick={() => scrollToSection(item.id)}
-                whileHover={{ scale: 1.1, color: '#60a5fa' }}
+whileHover={{ scale: 1.05, rotateX: 5, rotateY: 10, rotateZ: 2, color: '#60a5fa' }}
                 whileTap={{ scale: 0.95 }}
                 className="text-slate-300 hover:text-blue-400 transition-colors font-medium relative group"
               >
@@ -305,7 +306,7 @@ export default function Portfolio() {
           initial={{ rotateY: -30, rotateX: 15, opacity: 0, scale: 0.5 }}
           animate={{ rotateY: 0, rotateX: 0, opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, type: "spring", stiffness: 80, damping: 20 }}
-          whileHover={{ rotateY: 20, rotateX: -10, scale: 1.08 }}
+whileHover={{ rotateY: 25, rotateX: -15, rotateZ: 5, scale: 1.1, transition: { duration: 0.3 } }}
           style={{ perspective: "2000px" }}
           className="relative"
         >
@@ -517,7 +518,7 @@ export default function Portfolio() {
             className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
           >
             <motion.button 
-              whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(59, 130, 246, 0.5)" }}
+whileHover={{ scale: 1.05, rotateY: 10, translateZ: 20, boxShadow: "0 20px 40px rgba(59, 130, 246, 0.4)" }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection('projects')}
               className="w-full sm:w-auto rounded-2xl px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold shadow-lg"
