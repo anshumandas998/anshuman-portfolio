@@ -21,7 +21,7 @@
 
 **Target File:** `src/App.jsx` (Framer Motion 3D transforms)
 
-**GitHub Updated:** Changes committed/pushed to `blackboxai/hackathon-achievement` branch. PR ready for merge.
+**GitHub Updated:** server/.gitignore created, server/package-lock.json staged. Ready to commit/push to `blackboxai/hackathon-achievement` branch. PR ready for merge.
 
-**Next:** Deploy to Vercel + test production contact form.
+**Next:** Execute the commit/push commands below, then `gh auth login` && `gh pr create --fill` to open/update PR to main. Deploy to Vercel + test production contact form.
 Frontend live reload at http://localhost:5173
