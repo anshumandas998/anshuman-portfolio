@@ -4,11 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "npm run dev --prefix portfolio-app",
-    "build": "npm run build --prefix portfolio-app",
+    "build": "cd portfolio-app && npm install && npm run build",
+    "vercel-build": "cd portfolio-app && npm install && npm run build",
     "preview": "npm run preview --prefix portfolio-app",
     "start": "npm run dev --prefix portfolio-app"
-  },
-  "dependencies": {
-    "mongoose": "^9.2.3"
   }
 }
