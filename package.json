@@ -1,4 +1,13 @@
 {
+  "name": "anshuman-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix portfolio-app",
+    "build": "npm run build --prefix portfolio-app",
+    "preview": "npm run preview --prefix portfolio-app",
+    "start": "npm run dev --prefix portfolio-app"
+  },
   "dependencies": {
     "mongoose": "^9.2.3"
   }
